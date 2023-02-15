@@ -1,0 +1,10 @@
+syntax = "proto3";
+package dog;
+
+option go_package = "proto/bad";
+
+message Dog {
+    string name = 1;
+    int32 age = 2;
+    string address = 3;
+}

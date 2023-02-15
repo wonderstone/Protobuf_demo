@@ -1,0 +1,11 @@
+syntax = "proto3";
+package god;
+import "proto/good/good.proto";
+option go_package = "proto/god; god";
+
+message God {
+    string name = 1;
+    int32 age = 2;
+    repeated good.Person persons = 3;
+}
+

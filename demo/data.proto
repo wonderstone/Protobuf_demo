@@ -1,0 +1,23 @@
+syntax = "proto3";
+package demo;
+
+option go_package = "./;demo";
+
+message BarM {
+  string BarTime = 1;
+  string InstID = 2;
+  map<string, double> IndiDataMap = 3;
+}
+
+message BarS {
+  string BarTime = 1;
+  string InstID = 2;
+  repeated double IndiDataSlice = 3;
+}
+
+message MapBarM {
+  map<string, BarM> MapBarM = 1; // map in
+}
+message MapBarS {
+  map<string, BarS> MapBarS = 1; // map in
+}
